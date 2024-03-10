@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const FilaChofer = ({ chofer, destino, unidad, detalles }) => {
+const FilaChofer = ({ choferSeleccionado, destino, unidad, detalles }) => {
   return (
     <View style={styles.fila}>
-      <Text>{chofer}</Text>
-      <Text>{`Destino: ${destino} - Unidad: ${unidad}`}</Text>
-      <Text>{detalles}</Text>
+      <Text>{choferSeleccionado}</Text>
+      <Text>{`Unidad: ${unidad} - Destino: ${destino}`}</Text>
+      <Text>{`Detalles: ${detalles}`}</Text>
     </View>
   );
 };

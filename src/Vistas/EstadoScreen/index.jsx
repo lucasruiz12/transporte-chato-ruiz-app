@@ -3,12 +3,12 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import TablaChoferes from '../../Componentes/TablaChoferes';
-import { empleadosData } from './empleadosData';
+import { choferesData } from '../../ArrayData/choferesData';
 
 const EstadoScreen = () => {
   return (
     <View style={styles.container}>
-      <TablaChoferes data={empleadosData} />
+      <TablaChoferes data={choferesData} />
     </View>
   );
 };
