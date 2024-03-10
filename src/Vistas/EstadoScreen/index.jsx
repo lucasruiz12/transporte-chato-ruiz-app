@@ -3,48 +3,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import TablaChoferes from '../../Componentes/TablaChoferes';
-
-const empleadosData = [
-  {
-    id: 1,
-    apodo: "Mono",
-    nombre: "Villagra, Roque Armando",
-    dni: 11111111,
-    disponible: true,
-    viajes: {
-      mar23: [],
-      abr23: [],
-    },
-    viajeActual: "Proyecto",
-    unidadActual: "AG 010 SM"
-  },
-  {
-    id: 1,
-    apodo: "Mono",
-    nombre: "Villagra, Roque Armando",
-    dni: 11111111,
-    disponible: true,
-    viajes: {
-      mar23: [],
-      abr23: [],
-    },
-    viajeActual: "Proyecto",
-    unidadActual: "AG 010 SM"
-  },
-  {
-    id: 1,
-    apodo: "Mono",
-    nombre: "Villagra, Roque Armando",
-    dni: 11111111,
-    disponible: true,
-    viajes: {
-      mar23: [],
-      abr23: [],
-    },
-    viajeActual: "Proyecto",
-    unidadActual: "AG 010 SM"
-  },
-];
+import { empleadosData } from './empleadosData';
 
 const EstadoScreen = () => {
   return (
