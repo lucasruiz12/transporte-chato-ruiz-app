@@ -1,7 +1,8 @@
 // AsignarScreen.js
 
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity, Picker, Alert, Clipboard } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity, Alert, Clipboard, Keyboard } from 'react-native';
+import {Picker} from '@react-native-picker/picker';
 // import Clipboard from 'react-native-clipboard';
 import FilaChofer from '../../Componentes/FilaChofer';
 import { unidadesData } from '../../ArrayData/unidadesData';
@@ -29,6 +30,7 @@ const AsignarScreen = () => {
       setUnidad('');
       setDestino('');
       setDetalles('');
+      Keyboard .dismiss();
     } else {
       // Alert.alert("Faltan campos1")
       // Swal.fire("FALTA")

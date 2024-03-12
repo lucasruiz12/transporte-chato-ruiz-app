@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "993284795694",
+    "project_id": "transporte-chato-ruiz-app",
+    "storage_bucket": "transporte-chato-ruiz-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993284795694:android:35aa9c6fc6734e2c1a1ebf",
+        "android_client_info": {
+          "package_name": "com.lucasruiz12.transportechatoruizapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKVSf8GFXLic5LHvcx3UZvdICqbdatwm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
