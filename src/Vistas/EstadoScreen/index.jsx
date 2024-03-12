@@ -1,9 +1,10 @@
 // EstadoScreen.js
 
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import TablaChoferes from '../../Componentes/TablaChoferes';
 import { choferesData } from '../../ArrayData/choferesData';
+import { styles } from './styles';
 
 const EstadoScreen = () => {
   return (
@@ -12,13 +13,6 @@ const EstadoScreen = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-  },
-});
 
 EstadoScreen.navigationOptions = {
   title: 'Estado',

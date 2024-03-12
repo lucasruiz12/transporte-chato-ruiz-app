@@ -1,12 +1,13 @@
 // AsignarScreen.js
 
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity, Alert, Clipboard, Keyboard } from 'react-native';
+import { View, Text, TextInput, Button, ScrollView, TouchableOpacity, Alert, Clipboard, Keyboard } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 // import Clipboard from 'react-native-clipboard';
 import FilaChofer from '../../Componentes/FilaChofer';
 import { unidadesData } from '../../ArrayData/unidadesData';
 import { choferesData } from '../../ArrayData/choferesData';
+import { styles } from './styles';
 // import Swal from 'sweetalert2';
 
 const AsignarScreen = () => {
@@ -74,7 +75,7 @@ const AsignarScreen = () => {
           >
             <Picker.Item key={0} label={"--Lista de Choferes--"} value={''} />
             {choferesData.map(option => (
-              <Picker.Item key={option.id} label={option.apodo} value={option.apodo} />
+              <Picker.Item key={option.id} label={option.apodo} value={option.apodo} enabled={!choferes.some(el => el.choferSeleccionado === option.apodo)} />
             ))}
           </Picker>
         </View>
@@ -87,7 +88,7 @@ const AsignarScreen = () => {
           >
             <Picker.Item key={0} label={"--Lista de Unidades--"} value={''} />
             {unidadesData.map(option => (
-              <Picker.Item key={option.id} label={option.patente} value={option.patente} />
+              <Picker.Item key={option.id} label={option.patente} value={option.patente} enabled={!choferes.some(el => el.unidad === option.patente)} />
             ))}
           </Picker>
         </View>
@@ -110,52 +111,5 @@ const AsignarScreen = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-  },
-  agregarChofer: {
-    alignItems: 'flex-end',
-    marginBottom: 10,
-  },
-  agregarChoferTexto: {
-    color: 'blue',
-    textDecorationLine: 'underline',
-  },
-  inputsContainer: {
-    marginBottom: 20,
-  },
-  inputRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 10,
-  },
-  label: {
-    width: '30%',
-  },
-  input: {
-    flex: 1,
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    paddingHorizontal: 10,
-    backgroundColor: "white",
-  },
-  picker: {
-    flex: 1,
-    height: 40,
-    marginLeft: 10,
-  },
-  textArea: {
-    flex: 1,
-    height: 100,
-    borderColor: 'gray',
-    borderWidth: 1,
-    paddingHorizontal: 10,
-    backgroundColor: "white",
-  },
-});
 
 export default AsignarScreen;
